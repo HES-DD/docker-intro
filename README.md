@@ -22,7 +22,14 @@ and
 
 ---
 
-### talking points:
+<style scoped>section { margin: auto; text-align: center; }</style>
+
+![](https://static.packt-cdn.com/products/9781786463142/graphics/B05468_Ch01_01.jpg)
+
+---
+
+### 💬
+
 - a container is like a virtual machine, but it's not
 - can be controlled over the command line or docker desktop
 - docker images are build from a Dockerfile or can be downloaded from the docker hub
@@ -53,7 +60,7 @@ Make sure you can run it with `docker run hello-world`.
 - run `docker ps` to see the running container (`-a` to see also stopped containers)
 - run `docker stop my-running-app` to stop the container
 
-### talking points:
+### 💬
 - Dockerfiles always start with `FROM`. They are based on another image.
 - You can create/configure/install your "server" inside your Dockerfile with COPY / RUN etc.
 - `docker build` builds an image from a Dockerfile
@@ -72,7 +79,7 @@ Make sure you can run it with `docker run hello-world`.
 - run `docker build -t node-hello .`
 - run `docker run -ti -p 5000:5000 node-hello`
 
-### talking points:
+### 💬
 - a prebuild image already has an application/binary which is running by CMD as a main process
 - you can define your own CMD in the end of your Dockerfile 
 
@@ -96,7 +103,7 @@ Let the cow say "Hello World" when the container is started.
 - run `docker build -t node-volumes .`
 - run `docker run -ti -p 5000:5000 -v ./data:/data node-volumes`
 
-### talking points:
+### 💬
 - containers are ephemeral, they don't save data
 - if you need persistent data you have to use volumes
 - you can mount volumes with `-v <host-path>:<container-path>`
@@ -109,19 +116,21 @@ Let the cow say "Hello World" when the container is started.
 - go into /5_composing
 - run `docker-compose up`
 
-### talking points:
+### 💬
 - docker-compose is a tool to run multiple containers
 - you can define your containers in a docker-compose.yml file
 - you can start them with `docker compose up` (`-d` for background)
 - you can stop them with `docker compose down`
 - `--build` to rebuild the images
 
+![bg right](https://imgb.ifunny.co/images/56a968fe258d40c8e31851cb37b7b8ff992961d3759a8fbbd348f32d5a195ff3_1.jpg)
+
 ---
 
 ## 6 - image tool
 see imagetool code
 
-### talking points:
+### 💬
 - image tool has two sets of compose files (dev and prod)
 - in dev the source code is mounted, in prod it's copied and build 
 - the prod Dockerfiles have several layers to keep the final image small
@@ -141,9 +150,10 @@ Use any tech stacks you want.
 
 ---
 
-# Done!
+## Done!
 - What if we need many containers?
 - What if we need to scale them depending on traffic/load?
-- What if we need to update them without downtime?
---> Kubernetes to the rescue! 🤯
+- What if we need to deploy them without downtime?
+  → Kubernetes 🤯
 
+![bg right](https://cdn.prod.www.spiegel.de/images/548e5544-0001-0004-0000-000000355441_w1600_r1.4937759336099585_fpx54.17_fpy52.95.webp)
