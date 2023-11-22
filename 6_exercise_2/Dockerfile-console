@@ -1,9 +1,0 @@
-FROM alpine
-
-RUN apk --update add curl
-
-WORKDIR /app
-COPY entrypoint.sh /app
-RUN chmod +x entrypoint.sh
-
-ENTRYPOINT ["/app/entrypoint.sh"]
