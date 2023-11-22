@@ -9,6 +9,8 @@
 
 because containers are ~~f*ing~~ really useful ❤️
 
+https://github.com/HES-DD/docker-intro
+
 ---
 
 ## What is docker?
